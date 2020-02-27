@@ -52,7 +52,14 @@ public class FizzBuzzSolution {
         return false;
     }
 
-    public String print(boolean three, boolean five, boolean deluxe){
+    public boolean checkFake(Integer n){
+        if(n%2 == 0){
+            return true;
+        }
+        return false;
+    }
+
+    public String print(boolean three, boolean five, boolean deluxe, boolean fake){
         String returnat;
         if(three == true && five == false){
             returnat = "fizz";
@@ -83,3 +90,4 @@ public class FizzBuzzSolution {
     }
 
 }
+
