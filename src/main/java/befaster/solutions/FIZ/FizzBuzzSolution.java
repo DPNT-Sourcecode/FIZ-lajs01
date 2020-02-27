@@ -61,12 +61,20 @@ public class FizzBuzzSolution {
         } else if(three == true && five == true){
             returnat =  "fizz buzz";
         } else {
-            return "n";
+            returnat = "n";
         }
+        if(deluxe == true){
+            if(returnat.equals("n")){
+                returnat = "deluxe";
+            } else {
+                returnat += " deluxe";
+            }
+        }
+        return returnat;
     }
 
     public String fizzBuzz(Integer number) {
-        String solutie = print(checkThree(number,hasThree(number)),checkFive(number,hasFive(number)));
+        String solutie = print(checkThree(number,hasThree(number)),checkFive(number,hasFive(number)),true);
         if(solutie.equals("n")){
             return number.toString();
         } else {
@@ -75,5 +83,6 @@ public class FizzBuzzSolution {
     }
 
 }
+
 
 
