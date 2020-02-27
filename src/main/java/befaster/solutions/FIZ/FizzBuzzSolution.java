@@ -37,16 +37,11 @@ public class FizzBuzzSolution {
         return false;
     }
 
-    public boolean isDeluxe(Integer n){
-        if(n > 10){
-            int digit = n%10;
-            n = n/10;
-            while(n > 0){
-                if(n%10 != digit){
-                    return false;
-                }
-                n = n/10;
-            }
+    public boolean isDeluxe(Integer n, boolean verifyThree, boolean verifyFive){
+        if(n % 3 == 0 && verifyThree == true){
+            return true;
+        }
+        if(n % 5 == 0 && verifyFive == true){
             return true;
         }
         return false;
@@ -89,7 +84,7 @@ public class FizzBuzzSolution {
     }
 
     public String fizzBuzz(Integer number) {
-        String solutie = print(checkThree(number,hasThree(number)),checkFive(number,hasFive(number)),isDeluxe(number), checkFake(number));
+        String solutie = print(checkThree(number,hasThree(number)),checkFive(number,hasFive(number)),isDeluxe(number, hasThree(number), hasFive(number)), checkFake(number));
         if(solutie.equals("n")){
             return number.toString();
         } else {
@@ -98,5 +93,6 @@ public class FizzBuzzSolution {
     }
 
 }
+
 
 
