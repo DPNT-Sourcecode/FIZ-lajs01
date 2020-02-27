@@ -50,7 +50,7 @@ public class FizzBuzzSolution {
     }
 
     public String fizzBuzz(Integer number) {
-        String solutie = print(checkThree(number),checkFive(number));
+        String solutie = print(checkThree(number,hasThree(number)),checkFive(number,hasFive(number)));
         if(solutie.equals("n")){
             return number.toString();
         } else {
@@ -59,3 +59,4 @@ public class FizzBuzzSolution {
     }
 
 }
+
