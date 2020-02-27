@@ -7,10 +7,11 @@ public class Main {
         System.out.println(s);
         s = f.fizzBuzz(10);
         System.out.println(s);
-        s = f.fizzBuzz(99);
+        s = f.fizzBuzz(55);
         System.out.println(s);
     }
 }
+
 
 
 
