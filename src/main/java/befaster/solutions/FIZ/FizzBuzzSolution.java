@@ -54,9 +54,9 @@ public class FizzBuzzSolution {
 
     public boolean checkFake(Integer n){
         if(n%2 == 0){
-            return true;
+            return false;
         }
-        return false;
+        return true;
     }
 
     public String print(boolean three, boolean five, boolean deluxe, boolean fake){
@@ -71,17 +71,25 @@ public class FizzBuzzSolution {
             returnat = "n";
         }
         if(deluxe == true){
-            if(returnat.equals("n")){
-                returnat = "deluxe";
+            if(fake == true){
+                if(returnat.equals("n")){
+                    returnat = "fake deluxe";
+                } else {
+                    returnat += " fake deluxe";
+                }
             } else {
-                returnat += " deluxe";
+                if (returnat.equals("n")) {
+                    returnat = "deluxe";
+                } else {
+                    returnat += " deluxe";
+                }
             }
         }
         return returnat;
     }
 
     public String fizzBuzz(Integer number) {
-        String solutie = print(checkThree(number,hasThree(number)),checkFive(number,hasFive(number)),isDeluxe(number));
+        String solutie = print(checkThree(number,hasThree(number)),checkFive(number,hasFive(number)),isDeluxe(number), checkFake(number));
         if(solutie.equals("n")){
             return number.toString();
         } else {
@@ -90,4 +98,5 @@ public class FizzBuzzSolution {
     }
 
 }
+
 
