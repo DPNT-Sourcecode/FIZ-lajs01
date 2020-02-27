@@ -37,13 +37,29 @@ public class FizzBuzzSolution {
         return false;
     }
 
-    public String print(boolean three, boolean five){
+    public boolean isDeluxe(Integer n){
+        int digit = n%10;
+        n = n/10;
+        if(n > 10){
+            while(n > 0){
+                if(n%10 != digit){
+                    return false;
+                }
+                n = n/10;
+            }
+            return true;
+        }
+        return false;
+    }
+
+    public String print(boolean three, boolean five, boolean deluxe){
+        String returnat;
         if(three == true && five == false){
-            return "fizz";
+            returnat = "fizz";
         } else if(three == false && five == true){
-            return "buzz";
+            returnat =  "buzz";
         } else if(three == true && five == true){
-            return "fizz buzz";
+            returnat =  "fizz buzz";
         } else {
             return "n";
         }
@@ -59,4 +75,5 @@ public class FizzBuzzSolution {
     }
 
 }
+
 
