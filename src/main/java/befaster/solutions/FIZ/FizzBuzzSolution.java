@@ -67,17 +67,9 @@ public class FizzBuzzSolution {
         }
         if(deluxe == true){
             if(fake == true){
-                if(returnat.equals("n")){
-                    returnat = "fake deluxe";
-                } else {
-                    returnat += " fake deluxe";
-                }
+                returnat += " fake deluxe";
             } else {
-                if (returnat.equals("n")) {
-                    returnat = "deluxe";
-                } else {
-                    returnat += " deluxe";
-                }
+                returnat += " deluxe";
             }
         }
         return returnat;
@@ -93,6 +85,7 @@ public class FizzBuzzSolution {
     }
 
 }
+
 
 
 
