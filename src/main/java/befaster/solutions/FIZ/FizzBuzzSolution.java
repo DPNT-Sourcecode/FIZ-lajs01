@@ -3,16 +3,36 @@ package befaster.solutions.FIZ;
 import befaster.runner.SolutionNotImplementedException;
 
 public class FizzBuzzSolution {
-    public boolean checkThree(Integer number){
-        if(number % 3 == 0){
+    public boolean checkThree(Integer number, boolean verify){
+        if(number % 3 == 0 || verify == true){
             return true;
         }
         return false;
     }
 
-    public boolean checkFive(Integer number){
-        if(number % 5 == 0){
+    public boolean checkFive(Integer number, boolean verify){
+        if(number % 5 == 0 || verify == true){
             return true;
+        }
+        return false;
+    }
+
+    public boolean hasThree(Integer n){
+        while(n > 0){
+            if(n % 10 == 3){
+                return true;
+            }
+            n = n/10;
+        }
+        return false;
+    }
+
+    public boolean hasFive(Integer n){
+        while(n > 0){
+            if(n % 10 == 5){
+                return true;
+            }
+            n = n/10;
         }
         return false;
     }
@@ -39,4 +59,3 @@ public class FizzBuzzSolution {
     }
 
 }
-
